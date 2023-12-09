@@ -32,19 +32,10 @@ nmap <silent> gd <Plug>(coc-definition)
 " 利用箇所をリストで表示する
 nmap <silent> gr <Plug>(coc-references)
 
-" ドキュメントを参照する
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
-
 call plug#begin()
+Plug 'tpope/vim-endwise'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'thinca/vim-ref'
 call plug#end()
