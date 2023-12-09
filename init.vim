@@ -2,6 +2,7 @@ set clipboard+=unnamedplus
 set shiftwidth=4 softtabstop=4 expandtab
 set number
 set history=200
+set noswapfile
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
