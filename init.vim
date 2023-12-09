@@ -27,6 +27,21 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " Enterで補完を完了する
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
+" 定義箇所に移動する 
+nmap <silent> gd <Plug>(coc-definition)
+" 利用箇所をリストで表示する
+nmap <silent> gr <Plug>(coc-references)
+
+" ドキュメントを参照する
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 
 call plug#begin()
 Plug 'preservim/nerdtree'
