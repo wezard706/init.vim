@@ -32,6 +32,11 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nmap <silent> gd <Plug>(coc-definition)
 " 利用箇所をリストで表示する
 nmap <silent> gr <Plug>(coc-references)
+" --- coc.nvim ---
+
+" --- terminal ---
+autocmd TermOpen * startinsert
+" --- terminal ---
 
 call plug#begin()
 Plug 'tpope/vim-endwise'
@@ -39,4 +44,6 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'thinca/vim-ref'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
