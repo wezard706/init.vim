@@ -4,6 +4,7 @@ set number
 set history=200
 set noswapfile
 
+let mapleader = "\<Space>"
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 nnoremap <silent> <C-j> :bprevious<CR>
@@ -38,6 +39,15 @@ nmap <silent> gr <Plug>(coc-references)
 " --- terminal ---
 autocmd TermOpen * startinsert
 " --- terminal ---
+
+" --- fzf.vim ---
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :GFiles<CR>
+nnoremap <silent> <leader>G :GFiles?<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>h :History<CR>
+nnoremap <silent> <leader>r :Rg<CR>
+" --- fzf.vim ---
 
 call plug#begin()
 Plug 'tpope/vim-endwise'
