@@ -6,11 +6,14 @@ set noswapfile
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR> 
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B:blast<CR>
+
+" --- NERDTree ---
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" --- NERDTree ---
 
 " --- coc.nvim ---
 " タブで次の補完候補を選択する
